@@ -9,7 +9,7 @@ A Worker forwards requests to one Container instance. The image installs `ffmpeg
 
 - `/` explains the demo and prints the installed FFmpeg version.
 - `/hello.mp4` runs FFmpeg on demand and streams a generated 1-second visibly
-  orange video with an 880 Hz tone.
+  orange H.264/AAC MP4 with an 880 Hz tone.
 
 ## Deploy
 

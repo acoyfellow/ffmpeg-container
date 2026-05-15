@@ -12,9 +12,9 @@ if [ "$path" = "/hello.mp4" ]; then
     -f lavfi -i sine=frequency=880:duration=1 \
     -vf "drawbox=x=0:y=0:w=iw:h=ih:color=0xF48120:t=fill,drawbox=x=18:y=18:w=284:h=144:color=white@0.96:t=8,drawbox=x=46:y=72:w=228:h=36:color=white@0.96:t=fill,drawbox=x=54:y=80:w=212:h=20:color=0xF48120:t=fill" \
     -shortest \
-    -c:v mpeg4 -q:v 5 \
+    -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune stillimage \
     -c:a aac -b:a 64k \
-    -movflags frag_keyframe+empty_moov \
+    -movflags frag_keyframe+empty_moov+default_base_moof \
     -f mp4 -
 fi
 
