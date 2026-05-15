@@ -4,9 +4,6 @@
   "main": "src/index.js",
   "compatibility_date": "2026-05-15",
   "workers_dev": true,
-  "routes": [
-    { "pattern": "ffmpeg.coey.dev", "custom_domain": true }
-  ],
   "containers": [
     {
       "class_name": "FfmpegContainer",
