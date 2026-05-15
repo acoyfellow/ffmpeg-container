@@ -1,0 +1,15 @@
+{
+  "name": "ffmpeg-container",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "dependencies": {
+    "@cloudflare/containers": "^0.3.4"
+  },
+  "devDependencies": {
+    "wrangler": "^4.91.0"
+  }
+}

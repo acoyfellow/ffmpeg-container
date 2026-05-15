@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ffmpeg-container",
+  "main": "src/index.js",
+  "compatibility_date": "2026-05-15",
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "ffmpeg.coey.dev", "custom_domain": true }
+  ],
+  "containers": [
+    {
+      "class_name": "FfmpegContainer",
+      "image": "./Dockerfile",
+      "max_instances": 1
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      { "name": "FFMPEG", "class_name": "FfmpegContainer" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["FfmpegContainer"] }
+  ]
+}
