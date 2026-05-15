@@ -10,6 +10,7 @@ if [ "$path" = "/hello.mp4" ]; then
     -hide_banner -loglevel error \
     -f lavfi -i color=c=0xF48120:s=320x180:d=1:r=24 \
     -f lavfi -i sine=frequency=880:duration=1 \
+    -vf "drawbox=x=0:y=0:w=iw:h=ih:color=0xF48120:t=fill,drawbox=x=18:y=18:w=284:h=144:color=white@0.96:t=8,drawbox=x=46:y=72:w=228:h=36:color=white@0.96:t=fill,drawbox=x=54:y=80:w=212:h=20:color=0xF48120:t=fill" \
     -shortest \
     -c:v mpeg4 -q:v 5 \
     -c:a aac -b:a 64k \
