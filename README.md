@@ -2,13 +2,11 @@
 
 Tiny Cloudflare Containers hello world for [`ffmpeg.coey.dev`](https://ffmpeg.coey.dev).
 
-A Worker forwards requests to one Container instance. The image installs `ffmpeg`
-and replies with:
+A Worker forwards requests to one Container instance. The image installs `ffmpeg`.
 
-```text
-hello from ffmpeg.coey.dev
-ffmpeg version ...
-```
+- `/` explains the demo and prints the installed FFmpeg version.
+- `/hello.mp4` runs FFmpeg on demand and streams a generated 1-second orange
+  video with an 880 Hz tone.
 
 ## Deploy
 
